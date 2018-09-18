@@ -45,7 +45,6 @@ public class AppFinder {
     @Configuration
     public class AppConfig extends WebMvcConfigurerAdapter {
 
-
         @Bean
         public WebMvcConfigurer corsConfigurer() {
             return new WebMvcConfigurerAdapter() {
