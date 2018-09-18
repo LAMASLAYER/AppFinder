@@ -1,1 +1,1 @@
-web: java -war target/RestApp-0.1.war
+web: java -war target/AppFinder-0.1.war
