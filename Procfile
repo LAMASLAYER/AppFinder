@@ -1,0 +1,1 @@
+web: java -war target/RestApp-0.1.war
