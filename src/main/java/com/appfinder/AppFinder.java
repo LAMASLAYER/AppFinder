@@ -22,9 +22,7 @@ public class AppFinder {
 
 
     public static void main(String[] args) {
-
         SpringApplication.run(AppFinder.class, args);
-
     }
 
     @Bean
