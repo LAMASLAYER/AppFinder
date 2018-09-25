@@ -11,6 +11,10 @@ public class IndexController {
             return "Welcome on AppFinder back-end."
                     + "<br/>"
                     + "See Players: "
-                    + "<a href='/users/getPlayers'>Players</a><br/>";
-        }
+                    + "<a href='/players/all'>Players</a><br/>"
+                    + "See Races: "
+                    + "<a href='/races/all'>Races</a><br/>"
+                    + "See Characters: "
+                    + "<a href='/characters/all'>Characters</a><br/>";
+    }
 }

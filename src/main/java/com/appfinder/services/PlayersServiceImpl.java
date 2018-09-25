@@ -3,6 +3,7 @@ package com.appfinder.services;
 import com.appfinder.models.Players;
 import com.appfinder.repositories.PlayerRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -11,23 +12,27 @@ import java.util.List;
 public class PlayersServiceImpl implements PlayersService {
 
 
-    private final PlayerRepository userRepository;
+    private final PlayerRepository playerRepository;
 
     @Autowired
     public PlayersServiceImpl(PlayerRepository userRepository) {
-        this.userRepository = userRepository;
+        this.playerRepository = userRepository;
     }
 
     @Override
-    public Players getPlayerById(Integer user_id) {
-        return userRepository.getOne(user_id);
+    @Query("SELECT * FROM players p WHERE p.id=?#{id}")
+    public Players getPlayerById(Integer player_id) {
+        return playerRepository.findOne(player_id);
     }
+
     @Override
-    public void savePlayer(Players user) {
-        userRepository.save(user);
+    public void savePlayer(Players player) {
+        playerRepository.save(player);
     }
+
     @Override
     public List<Players> getAllPlayers() {
-        return userRepository.findAll();
+        return playerRepository.findAll();
     }
+
 }

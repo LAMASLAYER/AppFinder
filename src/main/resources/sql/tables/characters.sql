@@ -1,0 +1,42 @@
+DROP TABLE IF EXISTS CHARACTERS;
+  CREATE TABLE CHARACTERS
+   (
+	CHAR_ID INT NOT NULL UNIQUE AUTO_INCREMENT,
+	RACE_ID INT NOT NULL,
+  PLAYER_ID INT NOT NULL,
+	AGE INT NOT NULL,
+	GENDER CHAR(1) NOT NULL,
+	NAME VARCHAR(255) NOT NULL,
+  LEVEL INT NOT NULL,
+  ALIGNMENT VARCHAR(64),
+  DEITY VARCHAR(64),
+  HEIGHT INT NOT NULL,
+  HEIGHT_UNIT VARCHAR(5),
+  WEIGHT INT NOT NULL,
+  WEIGHT_UNIT VARCHAR(5),
+  CREATION_DATE TIMESTAMP,
+    PRIMARY KEY (CHAR_ID)
+    );
+
+/*
+INSERT THIS FOR A TEST CHARACTER
+WARNING: RACE INSERT SHOULD BE DONE BEFORE. SEE RACES.SQL
+*/
+
+INSERT INTO characters
+VALUES (
+           1,
+           1,
+           1,
+           27,
+           'M',
+           'Johnny',
+           1,
+           'Chaotic Good',
+           null,
+           176,
+           'cm',
+           85,
+           'kg',
+           CURRENT_TIMESTAMP
+           );

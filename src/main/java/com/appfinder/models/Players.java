@@ -4,38 +4,33 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import java.sql.Timestamp;
 
 
 @Entity
 public class Players {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-
-    private String player_oid;
     private int player_id;
-    private String username;
+    private String name;
     private String password;
     private int credentials;
+    private String email;
 
-    public Players(String player_oid, int player_id, int credentials, String name, String password) {
+    private Timestamp creation_date;
+
+    public Players(int player_id, int credentials, String name, String password, String email, Timestamp creation_date) {
         super();
-        this.player_oid = player_oid;
         this.player_id = player_id;
-        this.username = name;
+        this.name = name;
         this.password = password;
         this.credentials = credentials;
+        this.email = email;
+        this.creation_date = creation_date;
     }
 
     public Players(){
         super();
-    }
-
-    public String getUsername() {
-        return username;
-    }
-
-    public void setUsername(String usrename) {
-        this.username = username;
     }
 
     public String getPassword() {
@@ -54,7 +49,7 @@ public class Players {
         this.credentials = credentials;
     }
 
-    public int getPlayer_id() {
+    public int getPlayer_email() {
         return player_id;
     }
 
@@ -62,12 +57,32 @@ public class Players {
         this.player_id = player_id;
     }
 
-    public String getPlayer_oid() {
-        return player_oid;
+    public String getEmail() {
+        return email;
     }
 
-    public void setPlayer_oid(String player_oid) {
-        this.player_oid = player_oid;
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public Timestamp getCreation_date() {
+        return creation_date;
+    }
+
+    public void setCreation_date(Timestamp creation_date) {
+        this.creation_date = creation_date;
+    }
+
+    public int getPlayer_id() {
+        return player_id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
 }
