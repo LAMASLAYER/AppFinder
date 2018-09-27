@@ -1,9 +1,6 @@
-package com.appfinder.controllers;
+package com.appfinder.characters;
 
 
-import com.appfinder.models.Characters;
-import com.appfinder.repositories.CharactersRepository;
-import com.appfinder.services.CharactersService;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,7 +25,7 @@ public class CharactersController {
         this.charactersService = charactersService;
     }
 
-    @RequestMapping("/all")
+    @GetMapping(path = "/all")
     @ResponseBody
     public List<Characters> getAllCharacters() {
         LOGGER.info("Retrieving Characters...");
@@ -37,14 +34,20 @@ public class CharactersController {
 
 
 
-    @RequestMapping("/{char_id}")
-    public Characters getCharacterById(@PathVariable Integer char_id) {
-        LOGGER.info("Retrieving player " + char_id);
-        return charactersService.getCharacterById(char_id);
+    @GetMapping(path = "/char_id/{charId}")
+    public Characters getCharacterById(@PathVariable int charId) {
+        LOGGER.info("Retrieving Character " + charId);
+        return charactersService.getCharacterById(charId);
     }
 
-    @RequestMapping("/post")
-    public void saveUser(@RequestBody Characters character) {
+    @PostMapping(path = "/post")
+    public void saveCharacter(@RequestBody Characters character) {
             charactersService.saveCharacter(character);
+    }
+
+    @GetMapping(path = "/player_id/{playerId}")
+    public List<Characters> getCharactersByPlayerId(@PathVariable int playerId) {
+        LOGGER.info("Retrieving characters of player " + playerId);
+        return charactersService.getCharactersByPlayerId(playerId);
     }
 }

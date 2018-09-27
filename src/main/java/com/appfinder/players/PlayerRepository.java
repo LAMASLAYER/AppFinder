@@ -1,6 +1,5 @@
-package com.appfinder.repositories;
+package com.appfinder.players;
 
-import com.appfinder.models.Players;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface PlayerRepository extends JpaRepository<Players, Integer> {

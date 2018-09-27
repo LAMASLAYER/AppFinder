@@ -1,9 +1,6 @@
-package com.appfinder.services;
+package com.appfinder.characters;
 
-import com.appfinder.models.Characters;
-import com.appfinder.repositories.CharactersRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -20,9 +17,8 @@ public class CharactersServiceImpl implements CharactersService {
     }
 
     @Override
-    @Query("SELECT * FROM characters c WHERE c.id=?#{id}")
-    public Characters getCharacterById(Integer char_id) {
-        return charactersRepository.findOne(char_id);
+    public Characters getCharacterById(Integer charId) {
+        return charactersRepository.findOne(charId);
     }
 
     @Override
@@ -33,6 +29,11 @@ public class CharactersServiceImpl implements CharactersService {
     @Override
     public List<Characters> getAllCharacters() {
         return charactersRepository.findAll();
+    }
+
+    @Override
+    public List<Characters> getCharactersByPlayerId(int playerId) {
+        return charactersRepository.findByPlayerId(playerId);
     }
 
 }

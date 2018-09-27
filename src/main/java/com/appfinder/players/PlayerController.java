@@ -1,10 +1,7 @@
-package com.appfinder.controllers;
+package com.appfinder.players;
 
 
 
-import com.appfinder.repositories.PlayerRepository;
-import com.appfinder.models.Players;
-import com.appfinder.services.PlayersService;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -29,7 +26,7 @@ public class PlayerController {
         this.playersService = playersService;
     }
 
-    @RequestMapping("/all")
+    @GetMapping(path = "/all")
     @ResponseBody
     public List<Players> getAllPlayers() {
         LOGGER.info("Retrieving players...");
@@ -38,14 +35,15 @@ public class PlayerController {
 
 
 
-    @RequestMapping("/{player_id}")
-    public Players getUserById(@PathVariable Integer player_id) {
-        LOGGER.info("Retrieving player " + player_id);
-        return playersService.getPlayerById(player_id);
+    @GetMapping(path = "/player_id/{playerId}")
+    public Players getUserById(@PathVariable int playerId) {
+        LOGGER.info("Retrieving player " + playerId);
+        return playersService.getPlayerById(playerId);
     }
 
-    @RequestMapping("/post")
-    public void saveUser(@RequestBody Players player) {
-            playersService.savePlayer(player);
+    @PostMapping(path = "/post")
+    public void savePlayer(Players player) {
+        playersService.savePlayer(player);
     }
+
 }

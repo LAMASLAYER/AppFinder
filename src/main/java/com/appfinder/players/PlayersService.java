@@ -1,11 +1,9 @@
-package com.appfinder.services;
-
-import com.appfinder.models.Players;
+package com.appfinder.players;
 
 import java.util.List;
 
 public interface PlayersService {
-    Players getPlayerById(Integer player_id);
+    Players getPlayerById(Integer playerId);
     void savePlayer(Players playersDto);
     List<Players> getAllPlayers();
 }

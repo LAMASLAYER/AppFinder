@@ -1,4 +1,5 @@
-package com.appfinder.models;
+package com.appfinder.characters;
+
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -11,9 +12,9 @@ public class Characters {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private int char_id;
-    private int race_id;
-    private int player_id;
+    private int charId;
+    private int raceId;
+    private int playerId;
     private int age;
     private char gender;
     private String name;
@@ -21,34 +22,34 @@ public class Characters {
     private String alignment;
     private String deity;
     private int height;
-    private String height_unit;
+    private String heightUnit;
     private int weight;
-    private String weight_unit;
-    private Timestamp creation_date;
+    private String weightUnit;
+    private Timestamp creationDate;
 
 
-    public int getChar_id() {
-        return char_id;
+    public int getCharId() {
+        return charId;
     }
 
-    public void setChar_id(int char_id) {
-        this.char_id = char_id;
+    public void setCharId(int charId) {
+        this.charId = charId;
     }
 
-    public int getRace_id() {
-        return race_id;
+    public int getRaceId() {
+        return raceId;
     }
 
-    public void setRace_id(int race_id) {
-        this.race_id = race_id;
+    public void setRaceId(int raceId) {
+        this.raceId = raceId;
     }
 
-    public int getPlayer_id() {
-        return player_id;
+    public int getPlayerId() {
+        return playerId;
     }
 
-    public void setPlayer_id(int player_id) {
-        this.player_id = player_id;
+    public void setPlayerId(int playerId) {
+        this.playerId = playerId;
     }
 
     public int getAge() {
@@ -107,12 +108,12 @@ public class Characters {
         this.height = height;
     }
 
-    public String getHeight_unit() {
-        return height_unit;
+    public String getHeightUnit() {
+        return heightUnit;
     }
 
-    public void setHeight_unit(String height_unit) {
-        this.height_unit = height_unit;
+    public void setHeightUnit(String heightUnit) {
+        this.heightUnit = heightUnit;
     }
 
     public int getWeight() {
@@ -123,19 +124,19 @@ public class Characters {
         this.weight = weight;
     }
 
-    public String getWeight_unit() {
-        return weight_unit;
+    public String getWeightUnit() {
+        return weightUnit;
     }
 
-    public void setWeight_unit(String weight_unit) {
-        this.weight_unit = weight_unit;
+    public void setWeightUnit(String weightUnit) {
+        this.weightUnit = weightUnit;
     }
 
-    public Timestamp getCreation_date() {
-        return creation_date;
+    public Timestamp getCreationDate() {
+        return creationDate;
     }
 
-    public void setCreation_date(Timestamp creation_date) {
-        this.creation_date = creation_date;
+    public void setCreationDate(Timestamp creationDate) {
+        this.creationDate = creationDate;
     }
 }

@@ -1,4 +1,6 @@
-package com.appfinder.models;
+package com.appfinder.players;
+
+
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -9,28 +11,42 @@ import java.sql.Timestamp;
 
 @Entity
 public class Players {
+
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private int player_id;
+    private int playerId;
     private String name;
     private String password;
     private int credentials;
     private String email;
+    private Timestamp creationDate;
 
-    private Timestamp creation_date;
-
-    public Players(int player_id, int credentials, String name, String password, String email, Timestamp creation_date) {
-        super();
-        this.player_id = player_id;
+    public Players(String name, String password, int credentials, String email, Timestamp creationDate) {
         this.name = name;
         this.password = password;
         this.credentials = credentials;
         this.email = email;
-        this.creation_date = creation_date;
+        this.creationDate = creationDate;
     }
 
     public Players(){
         super();
+    }
+
+    public int getPlayerId() {
+        return playerId;
+    }
+
+    public void setPlayerId(int playerId) {
+        this.playerId = playerId;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     public String getPassword() {
@@ -49,14 +65,6 @@ public class Players {
         this.credentials = credentials;
     }
 
-    public int getPlayer_email() {
-        return player_id;
-    }
-
-    public void setPlayer_id(int player_id) {
-        this.player_id = player_id;
-    }
-
     public String getEmail() {
         return email;
     }
@@ -65,24 +73,11 @@ public class Players {
         this.email = email;
     }
 
-    public Timestamp getCreation_date() {
-        return creation_date;
+    public Timestamp getCreationDate() {
+        return creationDate;
     }
 
-    public void setCreation_date(Timestamp creation_date) {
-        this.creation_date = creation_date;
+    public void setCreationDate(Timestamp creationDate) {
+        this.creationDate = creationDate;
     }
-
-    public int getPlayer_id() {
-        return player_id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
 }

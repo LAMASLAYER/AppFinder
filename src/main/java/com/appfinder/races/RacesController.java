@@ -1,9 +1,6 @@
-package com.appfinder.controllers;
+package com.appfinder.races;
 
 
-import com.appfinder.models.Races;
-import com.appfinder.repositories.RacesRepository;
-import com.appfinder.services.RacesService;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,7 +25,7 @@ public class RacesController {
         this.racesService = racesService;
     }
 
-    @RequestMapping("/all")
+    @GetMapping(path = "/all")
     @ResponseBody
     public List<Races> getAllRaces() {
         LOGGER.info("Retrieving races...");
@@ -37,13 +34,20 @@ public class RacesController {
 
 
 
-    @RequestMapping("/{race_id}")
-    public Races getRaceById(@PathVariable Integer race_id) {
-        LOGGER.info("Retrieving race " + race_id);
-        return racesService.getRaceById(race_id);
+    @GetMapping(path = "race_id/{raceId}")
+    public Races getRaceById(@PathVariable int raceId) {
+        LOGGER.info("Retrieving race " + raceId);
+        return racesService.getRaceById(raceId);
     }
 
-    @RequestMapping("/post")
+
+    @GetMapping(path = "name/{name}")
+    public Races getRaceById(@PathVariable String name) {
+        LOGGER.info("Retrieving race " + name);
+        return racesService.getRaceByName(name);
+    }
+
+    @PostMapping(path = "/post")
     public void saveUser(@RequestBody Races race) {
             racesService.saveRace(race);
     }

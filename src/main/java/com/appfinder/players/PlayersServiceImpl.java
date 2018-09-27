@@ -1,9 +1,6 @@
-package com.appfinder.services;
+package com.appfinder.players;
 
-import com.appfinder.models.Players;
-import com.appfinder.repositories.PlayerRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -20,9 +17,8 @@ public class PlayersServiceImpl implements PlayersService {
     }
 
     @Override
-    @Query("SELECT * FROM players p WHERE p.id=?#{id}")
-    public Players getPlayerById(Integer player_id) {
-        return playerRepository.findOne(player_id);
+    public Players getPlayerById(Integer playerId) {
+        return playerRepository.findOne(playerId);
     }
 
     @Override
