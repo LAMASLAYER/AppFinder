@@ -34,21 +34,22 @@ public class RacesController {
 
 
 
-    @GetMapping(path = "race_id/{raceId}")
+    @GetMapping(path = "raceid/{raceId}")
     public Races getRaceById(@PathVariable int raceId) {
-        LOGGER.info("Retrieving race " + raceId);
+        LOGGER.info("Retrieving race with the id: " + raceId);
         return racesService.getRaceById(raceId);
     }
 
 
     @GetMapping(path = "name/{name}")
     public Races getRaceById(@PathVariable String name) {
-        LOGGER.info("Retrieving race " + name);
+        LOGGER.info("Retrieving race with the name: " + name);
         return racesService.getRaceByName(name);
     }
 
     @PostMapping(path = "/post")
     public void saveUser(@RequestBody Races race) {
-            racesService.saveRace(race);
+        LOGGER.info("Saving Race " + race);
+        racesService.saveRace(race);
     }
 }

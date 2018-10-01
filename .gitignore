@@ -51,3 +51,4 @@ out-tsc/
 target/
 
 bash.exe.stackdump
+application.properties

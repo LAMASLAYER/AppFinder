@@ -28,26 +28,27 @@ public class CharactersController {
     @GetMapping(path = "/all")
     @ResponseBody
     public List<Characters> getAllCharacters() {
-        LOGGER.info("Retrieving Characters...");
+        LOGGER.info("Retrieving Skills...");
         return charactersRepository.findAll();
     }
 
 
 
-    @GetMapping(path = "/char_id/{charId}")
+    @GetMapping(path = "/charid/{charId}")
     public Characters getCharacterById(@PathVariable int charId) {
-        LOGGER.info("Retrieving Character " + charId);
+        LOGGER.info("Retrieving Character with the id: " + charId);
         return charactersService.getCharacterById(charId);
     }
 
     @PostMapping(path = "/post")
     public void saveCharacter(@RequestBody Characters character) {
-            charactersService.saveCharacter(character);
+        LOGGER.info("Saving Character " + character);
+        charactersService.saveCharacter(character);
     }
 
-    @GetMapping(path = "/player_id/{playerId}")
+    @GetMapping(path = "/playerid/{playerId}")
     public List<Characters> getCharactersByPlayerId(@PathVariable int playerId) {
-        LOGGER.info("Retrieving characters of player " + playerId);
+        LOGGER.info("Retrieving characters of player with the id: " + playerId);
         return charactersService.getCharactersByPlayerId(playerId);
     }
 }

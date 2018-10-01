@@ -35,14 +35,15 @@ public class PlayerController {
 
 
 
-    @GetMapping(path = "/player_id/{playerId}")
+    @GetMapping(path = "/playerid/{playerId}")
     public Players getUserById(@PathVariable int playerId) {
-        LOGGER.info("Retrieving player " + playerId);
+        LOGGER.info("Retrieving player with the id: " + playerId);
         return playersService.getPlayerById(playerId);
     }
 
     @PostMapping(path = "/post")
     public void savePlayer(Players player) {
+        LOGGER.info("Saving Player " + player);
         playersService.savePlayer(player);
     }
 

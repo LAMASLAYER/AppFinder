@@ -15,6 +15,15 @@ public class IndexController {
                     + "See Races: "
                     + "<a href='/races/all'>Races</a><br/>"
                     + "See Characters: "
-                    + "<a href='/characters/all'>Characters</a><br/>";
+                    + "<a href='/characters/all'>Characters</a><br/>"
+                    + "See Skills: "
+                    + "<a href='/skills/all'>Skills</a><br/>"
+                    + "See Gear: "
+                    + "<a href='/gear/all'>Gear</a><br/>"
+                    + "See Gear Types: "
+                    + "<a href='/gearTypes/all'>Gear Types</a><br/>"
+                    + "See Abilities: "
+                    + "<a href='/abilities/all'>Abilities</a><br/>";
+
     }
 }
