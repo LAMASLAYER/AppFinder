@@ -14,5 +14,3 @@ INSERT THIS FOR A TEST SKILL
 
 INSERT INTO SKILLS
 VALUES (1, 'CLIMB', 'STR', 'Ability to climb walls/cliffs/other');
-
-SELECT * from SKILLS

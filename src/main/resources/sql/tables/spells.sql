@@ -1,0 +1,44 @@
+DROP TABLE IF EXISTS SPELLS;
+CREATE TABLE SPELLS
+(
+  SPELL_ID INT NOT NULL UNIQUE AUTO_INCREMENT,
+  NAME VARCHAR(64) NOT NULL,
+  DESCRIPTION VARCHAR(1000),
+  DAMAGES VARCHAR(16),
+  ATTACK_RANGE VARCHAR(32),
+  DURATION VARCHAR(32),
+  SAVING_THROW VARCHAR(64),
+  CASTING_TIME VARCHAR(64),
+  TARGET VARCHAR(64),
+  SCHOOL VARCHAR(64),
+  LEVEL INT,
+  CASTER_CLASS VARCHAR(64),
+  SPELL_RESISTANCE VARCHAR(3),
+  DOMAIN VARCHAR(16),
+  SUB_DOMAIN VARCHAR(16),
+  COMPONENTS VARCHAR(16),
+  PRIMARY KEY (SPELL_ID)
+);
+
+/*
+INSERT THIS FOR A TEST SPELL
+*/
+
+INSERT INTO SPELLS
+VALUES (1,
+        'MASSIVE DEATH',
+        'Kills anybody within 100m',
+        '/',
+        '100m',
+        'INSTANTANEOUS',
+        'NO',
+        '1 standard action',
+        'Anybody in the zone',
+        'Death',
+        9999,
+        'NECROMANCER',
+        'No',
+        'Death',
+        null,
+        'VS'
+           );

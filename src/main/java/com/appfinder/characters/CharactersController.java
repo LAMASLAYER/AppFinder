@@ -28,7 +28,7 @@ public class CharactersController {
     @GetMapping(path = "/all")
     @ResponseBody
     public List<Characters> getAllCharacters() {
-        LOGGER.info("Retrieving Skills...");
+        LOGGER.info("Retrieving Spells...");
         return charactersRepository.findAll();
     }
 

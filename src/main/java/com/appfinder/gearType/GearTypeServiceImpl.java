@@ -1,4 +1,4 @@
-package com.appfinder.gearType;
+package com.appfinder.geartype;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

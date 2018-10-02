@@ -28,7 +28,7 @@ public class SkillsController {
     @GetMapping(path = "/all")
     @ResponseBody
     public List<Skills> getAllSkills() {
-        LOGGER.info("Retrieving Skills...");
+        LOGGER.info("Retrieving Spells...");
         return skillsRepository.findAll();
     }
 

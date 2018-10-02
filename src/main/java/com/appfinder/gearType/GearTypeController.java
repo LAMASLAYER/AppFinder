@@ -1,4 +1,4 @@
-package com.appfinder.gearType;
+package com.appfinder.geartype;
 
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
