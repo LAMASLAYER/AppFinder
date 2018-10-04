@@ -1,7 +1,7 @@
 package com.appfinder.data.chars;
 
 import java.util.List;
-import com.appfinder.components.gear.Gear;
+import com.appfinder.components.racestraits.RacesTraits;
 
 public class Character {
 
@@ -17,7 +17,7 @@ public class Character {
     private String heightUnit;
     private int weight;
     private String weightUnit;
-    private List<Gear> gear;
+    private List<RacesTraits> raceTraits;
 
 
     int getCharId() {
@@ -116,11 +116,11 @@ public class Character {
         this.weightUnit = weightUnit;
     }
 
-    public List<Gear> getGear() {
-        return gear;
+    public List<RacesTraits> getRacetraits() {
+        return raceTraits;
     }
 
-    public void setGear(List<Gear> gear) {
-        this.gear = gear;
+    public void setRaceTraits(List<RacesTraits> raceTraits) {
+        this.raceTraits = raceTraits;
     }
 }

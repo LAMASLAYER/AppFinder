@@ -15,7 +15,7 @@ INSERT THIS FOR A TEST RACE TRAIT
 */
 
 INSERT INTO RACES_TRAITS
-VALUES (1,
+VALUES (2,
         1,
         'Ability Score Racial Traits', 'Human characters gain a +2 racial bonus to one ability score of their choice at creation to represent their varied nature.',
         2,

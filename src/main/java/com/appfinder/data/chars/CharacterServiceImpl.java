@@ -2,9 +2,12 @@ package com.appfinder.data.chars;
 
 import java.util.List;
 import com.appfinder.components.characters.Characters;
-import com.appfinder.components.gear.Gear;
 import com.appfinder.components.races.Races;
+import com.appfinder.components.racestraits.RacesTraits;
 import org.apache.log4j.Logger;
+import org.springframework.core.ParameterizedTypeReference;
+import org.springframework.http.HttpMethod;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
@@ -39,6 +42,13 @@ public class CharacterServiceImpl implements CharacterService {
 
         Races charRace = restTemplate.getForObject(uri + "/races/raceId/" + character.getRaceId(), Races.class);
         newChar.setRace(charRace.getName());
+
+        ResponseEntity<List<RacesTraits>> response = restTemplate.exchange( uri + "/racesTraits/raceId/" + character.getRaceId(),
+                HttpMethod.GET,
+                null,
+                new ParameterizedTypeReference<List<RacesTraits>>(){});
+        List<RacesTraits> racesTraits = response.getBody();
+        newChar.setRaceTraits(racesTraits);
 
         return newChar;
     }
