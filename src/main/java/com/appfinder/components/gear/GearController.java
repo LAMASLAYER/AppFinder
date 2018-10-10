@@ -35,7 +35,7 @@ public class GearController {
 
     @GetMapping(path = "/gearId/{gearId}")
     public Gear getGearById(@PathVariable int gearId) {
-        LOGGER.info("Retrieving GearType with the id: " + gearId);
+        LOGGER.info("Retrieving Gear with the id: " + gearId);
         return gearService.getGearById(gearId);
     }
 
@@ -59,7 +59,13 @@ public class GearController {
 
     @GetMapping(path = "/typeId/{typeId}")
     public List<Gear> getGearByType(@PathVariable int typeId) {
-        LOGGER.info("Retrieving GearType with the ability id: " + typeId);
+        LOGGER.info("Retrieving GearType with the type id: " + typeId);
         return gearService.getGearByType(typeId);
+    }
+
+    @GetMapping(path = "/charGear/{ids}")
+    public List<Gear> getByIdIn(@PathVariable("ids") Integer[] ids) {
+        LOGGER.info("Retrieving Gears with ids of the list " + ids) ;
+        return gearService.getGearByIdIn(ids);
     }
 }

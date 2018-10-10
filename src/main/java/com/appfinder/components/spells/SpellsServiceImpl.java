@@ -43,4 +43,9 @@ public class SpellsServiceImpl implements SpellsService {
     @Override
     public List<Spells> getByClassAndLevelLessThanEqual(String casterClass, Integer level) { return spellsRepository.findByCasterClassAndLevelLessThanEqual(casterClass, level); }
 
+    @Override
+    public List<Spells> getSpellsByIdIn(Integer[] ids) {
+        return spellsRepository.findBySpellIdIn(ids);
+    }
+
 }

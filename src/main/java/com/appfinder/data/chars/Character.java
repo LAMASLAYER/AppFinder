@@ -1,7 +1,12 @@
 package com.appfinder.data.chars;
 
 import java.util.List;
+
+import com.appfinder.components.classes.Classes;
+import com.appfinder.components.gear.Gear;
 import com.appfinder.components.racestraits.RacesTraits;
+import com.appfinder.components.spells.Spells;
+import com.appfinder.data.classlevels.ClassLevels;
 
 public class Character {
 
@@ -18,6 +23,11 @@ public class Character {
     private int weight;
     private String weightUnit;
     private List<RacesTraits> raceTraits;
+    private List<Gear> gear;
+    private List<Classes> classes;
+    private List<ClassLevels> classLevels;
+    private List<Spells> spells;
+
 
 
     int getCharId() {
@@ -120,7 +130,39 @@ public class Character {
         return raceTraits;
     }
 
-    public void setRaceTraits(List<RacesTraits> raceTraits) {
+    void setRaceTraits(List<RacesTraits> raceTraits) {
         this.raceTraits = raceTraits;
+    }
+
+    public List<Gear> getGear() {
+        return gear;
+    }
+
+    public void setGear(List<Gear> gear) {
+        this.gear = gear;
+    }
+
+    public List<Classes> getClasses() {
+        return classes;
+    }
+
+    public void setClasses(List<Classes> classes) {
+        this.classes = classes;
+    }
+
+    public List<ClassLevels> getClassLevels() {
+        return classLevels;
+    }
+
+    public void setClassLevels(List<ClassLevels> classLevels) {
+        this.classLevels = classLevels;
+    }
+
+    public List<Spells> getSpells() {
+        return spells;
+    }
+
+    public void setSpells(List<Spells> spells) {
+        this.spells = spells;
     }
 }

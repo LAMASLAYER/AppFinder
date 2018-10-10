@@ -7,4 +7,6 @@ public interface ClassesService {
     void saveClass(Classes _class);
     List<Classes> getAllClasses();
     Classes getClassByName(String name);
+    List<Classes> getClassesByIdIn(Integer[] ids);
+
 }

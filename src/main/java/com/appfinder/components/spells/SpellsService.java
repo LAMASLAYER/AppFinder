@@ -10,4 +10,6 @@ public interface SpellsService {
     List<Spells> getByClassAndLevel(String casterClass, Integer level);
     List<Spells> getByClass(String casterClass);
     List<Spells> getByClassAndLevelLessThanEqual(String casterClass, Integer level);
+    List<Spells> getSpellsByIdIn(Integer[] ids);
+
 }

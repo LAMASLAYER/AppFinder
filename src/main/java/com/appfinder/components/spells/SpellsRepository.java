@@ -9,5 +9,6 @@ public interface SpellsRepository extends JpaRepository<Spells, Integer> {
     List<Spells> findByCasterClassAndLevel(String casterClass, Integer level);
     List<Spells> findByCasterClass(String casterClass);
     List<Spells> findByCasterClassAndLevelLessThanEqual(String casterClass, Integer level);
+    List<Spells> findBySpellIdIn(Integer[] ids);
 
 }

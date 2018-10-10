@@ -34,4 +34,8 @@ public class ClassesServiceImpl implements ClassesService {
     @Override
     public Classes getClassByName(String name) { return classesRepository.findByName(name); }
 
+    @Override
+    public List<Classes> getClassesByIdIn(Integer[] ids) {
+        return classesRepository.findByClassIdIn(ids);
+    }
 }

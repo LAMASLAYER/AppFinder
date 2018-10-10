@@ -8,4 +8,5 @@ public interface GearRepository extends JpaRepository<Gear, Integer> {
     Gear findByName(String name);
     List<Gear> findByAbilityId(int abilityId);
     List<Gear> findByTypeId(int typeId);
+    List<Gear> findByGearIdIn(Integer[] ids);
 }

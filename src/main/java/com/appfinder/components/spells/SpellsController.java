@@ -67,4 +67,10 @@ public class SpellsController {
         return spellsService.getByClassAndLevelLessThanEqual(casterClass, level);
     }
 
+    @GetMapping(path = "/charSpell/{ids}")
+    public List<Spells> getByIdIn(@PathVariable("ids") Integer[] ids) {
+        LOGGER.info("Retrieving Gears with ids of the list " + ids) ;
+        return spellsService.getSpellsByIdIn(ids);
+    }
+
 }

@@ -40,4 +40,9 @@ public class GearServiceImpl implements GearService {
     @Override
     public List<Gear> getGearByType(int typeId) { return gearRepository.findByTypeId(typeId); }
 
+    @Override
+    public List<Gear> getGearByIdIn(Integer[] ids) {
+        return gearRepository.findByGearIdIn(ids);
+    }
+
 }

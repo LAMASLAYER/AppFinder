@@ -10,4 +10,5 @@ public interface GearService {
     Gear getGearByName(String name);
     List<Gear> getGearByStat(int stat);
     List<Gear> getGearByType(int typeId);
+    List<Gear> getGearByIdIn(Integer[] ids);
 }

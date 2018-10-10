@@ -48,5 +48,9 @@ public class ClassesController {
         LOGGER.info("Retrieving class with the name: " + name);
         return classesService.getClassByName(name);
     }
-
+    @GetMapping(path = "/charClasses/{ids}")
+    public List<Classes> getByIdIn(@PathVariable("ids") Integer[] ids) {
+        LOGGER.info("Retrieving classes with ids of the list " + ids) ;
+        return classesService.getClassesByIdIn(ids);
+    }
 }

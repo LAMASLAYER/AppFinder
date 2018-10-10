@@ -25,3 +25,6 @@ INSERT THIS FOR A TEST GEAR
 
 INSERT INTO GEAR
 VALUES (1, 'THE ULTIMATE BEATDOWN', 1, 1000000, 1, 'Kills anything in 1 hit.', 999999, 1, 1, 'kg', '1000d20', '1000d20', 'x9999', null, null);
+
+INSERT INTO GEAR
+VALUES (2, 'The underwear of strength', 1, 1000000, 1, 'An underwear that makes you strong', null, 1, 1, 'kg', null, null, null, null, null);
