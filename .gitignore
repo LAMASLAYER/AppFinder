@@ -51,4 +51,4 @@ out-tsc/
 target/
 
 bash.exe.stackdump
-application.properties
+./src/main/java//resources/application.properties
