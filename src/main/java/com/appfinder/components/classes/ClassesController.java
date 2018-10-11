@@ -35,11 +35,12 @@ public class ClassesController {
     @GetMapping(path = "/classId/{classId}")
     public Classes getClassById(@PathVariable int classId) {
         LOGGER.info("Retrieving class with the id: " + classId);
+        LOGGER.trace("trace");
         return classesService.getClassById(classId);
     }
 
     @PostMapping(path = "/post")
-    public void saveAbility(@RequestBody Classes _class) {
+    public void saveClass(@RequestBody Classes _class) {
             classesService.saveClass(_class);
     }
 

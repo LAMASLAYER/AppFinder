@@ -1,12 +1,9 @@
-package com.appfinder.classFeats;
+package com.appfinder.components.classfeats;
+
 
 import java.util.List;
 
 public interface ClassFeatsService {
-    ClassFeats getClassFeatById(Integer classFeatId);
+    List<ClassFeats> getByClassId(Integer classId);
     void saveClassFeat(ClassFeats classFeat);
-    List<ClassFeats> getAllClassFeats();
-    List<ClassFeats> getByClassId(int classId);
-    List<ClassFeats> getByName(String name);
-    List<ClassFeats> getByType(int type);
 }

@@ -39,7 +39,7 @@ public class SkillsController {
     }
 
     @PostMapping(path = "/post")
-    public void saveAbility(@RequestBody Skills skill) {
+    public void saveSkill(@RequestBody Skills skill) {
             skillsService.saveSkill(skill);
     }
 
@@ -53,6 +53,12 @@ public class SkillsController {
     public List<Skills> getSkillsByPrimaryStat(@PathVariable String primaryStat) {
         LOGGER.info("Retrieving skills with stat: " + primaryStat);
         return skillsService.getSkillsByPrimaryStat(primaryStat);
+    }
+
+    @GetMapping(path = "/charSkill/{ids}")
+    public List<Skills> getByIdIn(@PathVariable("ids") Integer[] ids) {
+        LOGGER.info("Retrieving Gears with ids of the list " + ids) ;
+        return skillsService.getSkillsByIdIn(ids);
     }
 
 }

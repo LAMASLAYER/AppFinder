@@ -1,4 +1,4 @@
-package com.appfinder.classFeats;
+package com.appfinder.components.classfeats;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -6,19 +6,19 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
-class ClassFeatsServiceImpl implements ClassFeatsService {
+public class ClassFeatsServiceImpl implements ClassFeatsService {
 
 
     private final ClassFeatsRepository classFeatsRepository;
 
     @Autowired
-    public ClassFeatsServiceImpl(ClassFeatsRepository classFeatsRepository) {
-        this.classFeatsRepository = classFeatsRepository;
+    public ClassFeatsServiceImpl(ClassFeatsRepository classFeatRepository) {
+        this.classFeatsRepository = classFeatRepository;
     }
 
     @Override
-    public ClassFeats getClassFeatById(Integer classFeatId) {
-        return classFeatsRepository.findOne(classFeatId);
+    public List<ClassFeats> getByClassId(Integer classId) {
+        return classFeatsRepository.findByClassId(classId);
     }
 
     @Override
@@ -26,17 +26,6 @@ class ClassFeatsServiceImpl implements ClassFeatsService {
         classFeatsRepository.save(classFeat);
     }
 
-    @Override
-    public List<ClassFeats> getAllClassFeats() {
-        return classFeatsRepository.findAll();
-    }
 
-    @Override
-    public List<ClassFeats> getByClassId(int classId) { return classFeatsRepository.findByClassId(classId); }
 
-    @Override
-    public List<ClassFeats> getByName(String name) { return classFeatsRepository.findByName(name); }
-
-    @Override
-    public List<ClassFeats> getByType(int type) { return classFeatsRepository.findByType(type); }
 }

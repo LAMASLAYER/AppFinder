@@ -8,4 +8,5 @@ public interface SkillsService {
     List<Skills> getAllSkills();
     Skills getSkillByName(String name);
     List<Skills> getSkillsByPrimaryStat(String primaryStat);
+    List<Skills> getSkillsByIdIn(Integer[] ids);
 }

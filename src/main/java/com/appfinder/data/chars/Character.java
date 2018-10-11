@@ -3,10 +3,11 @@ package com.appfinder.data.chars;
 import java.util.List;
 
 import com.appfinder.components.classes.Classes;
+import com.appfinder.components.feats.Feats;
 import com.appfinder.components.gear.Gear;
 import com.appfinder.components.racestraits.RacesTraits;
+import com.appfinder.components.skills.Skills;
 import com.appfinder.components.spells.Spells;
-import com.appfinder.data.classlevels.ClassLevels;
 
 public class Character {
 
@@ -25,8 +26,9 @@ public class Character {
     private List<RacesTraits> raceTraits;
     private List<Gear> gear;
     private List<Classes> classes;
-    private List<ClassLevels> classLevels;
     private List<Spells> spells;
+    private List<Skills> skills;
+    private List<Feats> feats;
 
 
 
@@ -146,16 +148,8 @@ public class Character {
         return classes;
     }
 
-    public void setClasses(List<Classes> classes) {
+    void setClasses(List<Classes> classes) {
         this.classes = classes;
-    }
-
-    public List<ClassLevels> getClassLevels() {
-        return classLevels;
-    }
-
-    public void setClassLevels(List<ClassLevels> classLevels) {
-        this.classLevels = classLevels;
     }
 
     public List<Spells> getSpells() {
@@ -164,5 +158,21 @@ public class Character {
 
     public void setSpells(List<Spells> spells) {
         this.spells = spells;
+    }
+
+    public List<Skills> getSkills() {
+        return skills;
+    }
+
+    public void setSkills(List<Skills> skills) {
+        this.skills = skills;
+    }
+
+    public List<Feats> getFeats() {
+        return feats;
+    }
+
+    void setFeats(List<Feats> feats) {
+        this.feats = feats;
     }
 }

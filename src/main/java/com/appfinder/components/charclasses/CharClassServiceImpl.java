@@ -26,6 +26,7 @@ public class CharClassServiceImpl implements CharClassService {
         charClassRepository.save(charClass);
     }
 
-
+    @Override
+    public  CharClass getByCharIdAndClassId(int charId, int classId) { return charClassRepository.findByCharIdAndAndClassId(charId, classId); }
 
 }

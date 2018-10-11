@@ -1,4 +1,4 @@
-package com.appfinder.components.classfeatstype;
+package com.appfinder.components.feats;
 
 
 import javax.persistence.Entity;
@@ -8,21 +8,22 @@ import javax.persistence.Id;
 
 
 @Entity
-public class ClassFeatsType {
+public class Feats {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private int classFeatTypeId;
+    private int featId;
     private String name;
-    private String shortName;
     private String description;
+    private String special;
+    private String type;
 
-    public int getClassFeatTypeId() {
-        return classFeatTypeId;
+    public int getFeatId() {
+        return featId;
     }
 
-    public void setClassFeatTypeId(int classFeatTypeId) {
-        this.classFeatTypeId = classFeatTypeId;
+    public void setFeatId(int featId) {
+        this.featId = featId;
     }
 
     public String getName() {
@@ -33,14 +34,6 @@ public class ClassFeatsType {
         this.name = name;
     }
 
-    public String getShortName() {
-        return shortName;
-    }
-
-    public void setShortName(String shortName) {
-        this.shortName = shortName;
-    }
-
     public String getDescription() {
         return description;
     }
@@ -49,4 +42,19 @@ public class ClassFeatsType {
         this.description = description;
     }
 
+    public String getSpecial() {
+        return special;
+    }
+
+    public void setSpecial(String special) {
+        this.special = special;
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
+    }
 }

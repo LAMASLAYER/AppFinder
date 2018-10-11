@@ -1,4 +1,4 @@
-package com.appfinder.classSkills;
+package com.appfinder.components.classskills;
 
 
 import javax.persistence.Entity;

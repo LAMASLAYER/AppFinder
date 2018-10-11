@@ -1,18 +1,20 @@
 package com.appfinder.data.chars;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import com.appfinder.components.characters.Characters;
 import com.appfinder.components.charclasses.CharClass;
+import com.appfinder.components.charfeats.CharFeats;
 import com.appfinder.components.chargear.CharGear;
+import com.appfinder.components.charskills.CharSkills;
 import com.appfinder.components.charspells.CharSpell;
 import com.appfinder.components.classes.Classes;
+import com.appfinder.components.feats.Feats;
 import com.appfinder.components.gear.Gear;
 import com.appfinder.components.races.Races;
 import com.appfinder.components.racestraits.RacesTraits;
+import com.appfinder.components.skills.Skills;
 import com.appfinder.components.spells.Spells;
-import com.appfinder.data.classlevels.ClassLevels;
 import org.apache.log4j.Logger;
 import org.springframework.core.ParameterizedTypeReference;
 import org.springframework.http.HttpMethod;
@@ -78,15 +80,6 @@ public class CharacterServiceImpl implements CharacterService {
         List<Gear> gear = res3.getBody();
         newChar.setGear(gear);
 
-        ResponseEntity<List<CharClass>> res4 = restTemplate.exchange( uri + "/charClass/charId/" + character.getCharId(),
-                HttpMethod.GET,
-                null,
-                new ParameterizedTypeReference<List<CharClass>>(){});
-        List<CharClass> charClass = res4.getBody();
-        tempIds.delete(0, tempIds.length());
-        for (int j = 0; j < charClass.size(); j++) {
-            tempIds.append(charClass.get(j).getClassId()).append(",");
-        }
         String classIds;
         classIds = tempIds.substring(0, tempIds.length() - 1);
 
@@ -95,16 +88,15 @@ public class CharacterServiceImpl implements CharacterService {
                 null,
                 new ParameterizedTypeReference<List<Classes>>(){});
         List<Classes> classes = res5.getBody();
-        newChar.setClasses(classes);
-
-        ClassLevels classLevels = new ClassLevels();
-        List<ClassLevels> tempLevels = new ArrayList<>(charClass.size());
-        for (int k = 0; k < charClass.size(); k++) {
-            classLevels.setClassId(charClass.get(k).getClassId());
-            classLevels.setClassLevel(charClass.get(k).getClassLevel());
-            tempLevels.add(k, classLevels);
+        CharClass charClass;
+        for (int j = 0; j < classes.size(); j++){
+            LOGGER.info("in the loop");
+            charClass = restTemplate.getForObject(uri + "/charClass/charId/" + character.getCharId() + "/classId/" + classes.get(j).getClassId(), CharClass.class);
+            classes.get(j).setLevel(charClass.getClassLevel());
+            classes.get(j).setCasterLevel(charClass.getCasterLevel());
         }
-        newChar.setClassLevels(tempLevels);
+
+        newChar.setClasses(classes);
 
         ResponseEntity<List<CharSpell>> res6 = restTemplate.exchange( uri + "/charSpell/charId/" + character.getCharId(),
                 HttpMethod.GET,
@@ -112,8 +104,8 @@ public class CharacterServiceImpl implements CharacterService {
                 new ParameterizedTypeReference<List<CharSpell>>(){});
         List<CharSpell> charSpell = res6.getBody();
         tempIds.delete(0, tempIds.length());
-        for (int l = 0; l < charClass.size(); l++) {
-            tempIds.append(charClass.get(l).getClassId()).append(",");
+        for (int l = 0; l < charSpell.size(); l++) {
+            tempIds.append(charSpell.get(l).getSpellId()).append(",");
         }
         String spellIds;
         spellIds = tempIds.substring(0, tempIds.length() - 1);
@@ -124,6 +116,44 @@ public class CharacterServiceImpl implements CharacterService {
                 new ParameterizedTypeReference<List<Spells>>(){});
         List<Spells> spells = res7.getBody();
         newChar.setSpells(spells);
+
+        ResponseEntity<List<CharSkills>> res8 = restTemplate.exchange( uri + "/charSkill/charId/" + character.getCharId(),
+                HttpMethod.GET,
+                null,
+                new ParameterizedTypeReference<List<CharSkills>>(){});
+        List<CharSkills> charSkill = res8.getBody();
+        tempIds.delete(0, tempIds.length());
+        for (int l = 0; l < charSkill.size(); l++) {
+            tempIds.append(charSkill.get(l).getSkillId()).append(",");
+        }
+        String skillIds;
+        skillIds = tempIds.substring(0, tempIds.length() - 1);
+
+        ResponseEntity<List<Skills>> res9 = restTemplate.exchange( uri + "/skills/charSkill/" + skillIds,
+                HttpMethod.GET,
+                null,
+                new ParameterizedTypeReference<List<Skills>>(){});
+        List<Skills> skills = res9.getBody();
+        newChar.setSkills(skills);
+
+        ResponseEntity<List<CharFeats>> res10 = restTemplate.exchange( uri + "/charFeat/charId/" + character.getCharId(),
+                HttpMethod.GET,
+                null,
+                new ParameterizedTypeReference<List<CharFeats>>(){});
+        List<CharFeats> charFeat = res10.getBody();
+        tempIds.delete(0, tempIds.length());
+        for (int m = 0; m < charFeat.size(); m++) {
+            tempIds.append(charFeat.get(m).getFeatId()).append(",");
+        }
+        String featIds;
+        featIds = tempIds.substring(0, tempIds.length() - 1);
+
+        ResponseEntity<List<Feats>> res11 = restTemplate.exchange( uri + "/feats/charFeat/" + featIds,
+                HttpMethod.GET,
+                null,
+                new ParameterizedTypeReference<List<Feats>>(){});
+        List<Feats> feats = res11.getBody();
+        newChar.setFeats(feats);
 
         return newChar;
     }

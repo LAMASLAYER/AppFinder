@@ -1,4 +1,4 @@
-package com.appfinder.classSkills;
+package com.appfinder.components.classskills;
 
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
@@ -39,7 +39,7 @@ public class ClassSkillsController {
     }
 
     @PostMapping(path = "/post")
-    public void saveAbility(@RequestBody ClassSkills classSkill) {
+    public void saveClassSkill(@RequestBody ClassSkills classSkill) {
             classSkillsService.saveClassSkill(classSkill);
     }
 

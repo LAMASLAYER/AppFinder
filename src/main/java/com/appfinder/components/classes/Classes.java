@@ -18,6 +18,9 @@ public class Classes {
     private int hitDie;
     private String startingWealth;
     private int skillsPerLevel;
+    private Integer level;
+    private Integer casterLevel;
+
 
     public int getClassId() {
         return classId;
@@ -65,5 +68,21 @@ public class Classes {
 
     public void setSkillsPerLevel(int skillsPerLevel) {
         this.skillsPerLevel = skillsPerLevel;
+    }
+
+    public int getLevel() {
+        return level;
+    }
+
+    public void setLevel(int level) {
+        this.level = level;
+    }
+
+    public Integer getCasterLevel() {
+        return casterLevel;
+    }
+
+    public void setCasterLevel(Integer casterLevel) {
+        this.casterLevel = casterLevel;
     }
 }

@@ -1,4 +1,4 @@
-package com.appfinder.components.classfeats;
+package com.appfinder.components.charfeats;
 
 
 import javax.persistence.Entity;
@@ -8,28 +8,28 @@ import javax.persistence.Id;
 
 
 @Entity
-public class ClassFeats {
+public class CharFeats {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private int classFeatId;
-    private int classId;
+    private int charFeatId;
+    private int charId;
     private int featId;
 
-    public int getClassFeatId() {
-        return classFeatId;
+    public int getCharFeatId() {
+        return charFeatId;
     }
 
-    public void setClassFeatId(int classFeatId) {
-        this.classFeatId = classFeatId;
+    public void setCharFeatId(int charFeatId) {
+        this.charFeatId = charFeatId;
     }
 
-    public int getClassId() {
-        return classId;
+    public int getCharId() {
+        return charId;
     }
 
-    public void setClassId(int classId) {
-        this.classId = classId;
+    public void setCharId(int charId) {
+        this.charId = charId;
     }
 
     public int getFeatId() {

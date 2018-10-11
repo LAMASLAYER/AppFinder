@@ -39,7 +39,7 @@ public class SpellsController {
     }
 
     @PostMapping(path = "/post")
-    public void saveAbility(@RequestBody Spells spell) {
+    public void saveSpell(@RequestBody Spells spell) {
             spellsService.saveSpell(spell);
     }
 

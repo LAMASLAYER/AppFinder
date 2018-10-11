@@ -38,6 +38,8 @@ public class IndexController {
                     + "<a href='/racesTraits/all'>Races Traits</a><br/>"
                     + "See Currencies: "
                     + "<a href='/currencies/all'>Currencies</a><br/>"
+                    + "See Feats: "
+                    + "<a href='/feats/all'>Feats</a><br/>"
                     + "</body>";
 
     }

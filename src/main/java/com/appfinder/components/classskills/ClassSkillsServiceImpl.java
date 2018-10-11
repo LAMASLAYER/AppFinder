@@ -1,4 +1,4 @@
-package com.appfinder.classSkills;
+package com.appfinder.components.classskills;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

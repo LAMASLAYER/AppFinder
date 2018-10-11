@@ -39,4 +39,8 @@ public class SkillsServiceImpl implements SkillsService {
         return skillsRepository.findByPrimaryStat(primaryStat);
     }
 
+    @Override
+    public List<Skills> getSkillsByIdIn(Integer[] ids) {
+        return skillsRepository.findBySkillIdIn(ids);
+    }
 }

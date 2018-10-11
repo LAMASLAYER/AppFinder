@@ -7,6 +7,8 @@ CREATE TABLE CLASSES
   HIT_DIE INT NOT NULL,
   STARTING_WEALTH VARCHAR(32) NOT NULL,
   SKILLS_PER_LEVEL INT NOT NULL,
+  LEVEL INT,
+  CASTER_LEVEL INT,
   PRIMARY KEY (CLASS_ID)
 );
 
@@ -21,5 +23,21 @@ VALUES (
            'Any',
             6,
             '2D6 x 10gp',
-            2
+            2,
+            0,
+            0
            );
+/*wizard */
+
+INSERT INTO CLASSES
+VALUES (
+           2,
+           'Bard',
+           'Any',
+           6,
+           '2D6 x 10gp',
+           2,
+           0,
+           0
+           );
+/*wizard */

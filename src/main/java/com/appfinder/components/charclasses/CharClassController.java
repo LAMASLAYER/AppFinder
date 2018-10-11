@@ -46,5 +46,10 @@ public class CharClassController {
     }
 
 
+    @GetMapping(path = "/charId/{charId}/classId/{classId}")
+    public CharClass getCharClassByIdAndClassId(@PathVariable int charId, @PathVariable int classId) {
+        LOGGER.info("Retrieving CharClass with the id: " + charId + " and the class: " + classId);
+        return charClassService.getByCharIdAndClassId(charId, classId);
+    }
 
 }

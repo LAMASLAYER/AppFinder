@@ -16,6 +16,7 @@ public class CharClass {
     private int charId;
     private int classId;
     private int classLevel;
+    private int casterLevel;
 
     public int getCharClassId() {
         return charClassId;
@@ -47,5 +48,13 @@ public class CharClass {
 
     public void setClassLevel(int classLevel) {
         this.classLevel = classLevel;
+    }
+
+    public int getCasterLevel() {
+        return casterLevel;
+    }
+
+    public void setCasterLevel(int casterLevel) {
+        this.casterLevel = casterLevel;
     }
 }
