@@ -16,6 +16,8 @@ public class Abilities {
     private String name;
     private String shortNm;
     private String description;
+    private int value;
+    private int modifier;
 
 
     public int getAbilityId() {
@@ -50,4 +52,19 @@ public class Abilities {
         this.description = description;
     }
 
+    public int getValue() {
+        return value;
+    }
+
+    public void setValue(int value) {
+        this.value = value;
+    }
+
+    public int getModifier() {
+        return modifier;
+    }
+
+    public void setModifier(int modifier) {
+        this.modifier = modifier;
+    }
 }

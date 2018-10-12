@@ -26,7 +26,6 @@ VALUES (
             2,
             0,
             0
-           );
 /*wizard */
 
 INSERT INTO CLASSES
@@ -40,4 +39,4 @@ VALUES (
            0,
            0
            );
-/*wizard */
+/* LAST TWO VALUES MUST ALWAYS BE 0. THEY ARE SET IN THE CHAR BUILDER ! */

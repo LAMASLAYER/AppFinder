@@ -54,7 +54,7 @@ public class RacesTraitsController {
     }
 
     @PostMapping(path = "/post")
-    public void saveUser(@RequestBody RacesTraits raceTrait) {
+    public void saveRaceTrait(@RequestBody RacesTraits raceTrait) {
         LOGGER.info("Saving Race trait" + raceTrait);
         racesTraitsService.saveRace(raceTrait);
     }

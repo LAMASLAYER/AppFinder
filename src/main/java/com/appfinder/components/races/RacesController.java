@@ -48,7 +48,7 @@ public class RacesController {
     }
 
     @PostMapping(path = "/post")
-    public void saveUser(@RequestBody Races race) {
+    public void saveRace(@RequestBody Races race) {
         LOGGER.info("Saving Race " + race);
         racesService.saveRace(race);
     }

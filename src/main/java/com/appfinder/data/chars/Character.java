@@ -2,12 +2,14 @@ package com.appfinder.data.chars;
 
 import java.util.List;
 
+import com.appfinder.components.abilities.Abilities;
 import com.appfinder.components.classes.Classes;
 import com.appfinder.components.feats.Feats;
 import com.appfinder.components.gear.Gear;
 import com.appfinder.components.racestraits.RacesTraits;
 import com.appfinder.components.skills.Skills;
 import com.appfinder.components.spells.Spells;
+import com.appfinder.components.wealth.Wealth;
 
 public class Character {
 
@@ -29,8 +31,8 @@ public class Character {
     private List<Spells> spells;
     private List<Skills> skills;
     private List<Feats> feats;
-
-
+    private Wealth wealth;
+    private List<Abilities> abilities;
 
     int getCharId() {
         return charId;
@@ -174,5 +176,21 @@ public class Character {
 
     void setFeats(List<Feats> feats) {
         this.feats = feats;
+    }
+
+    public Wealth getWealth() {
+        return wealth;
+    }
+
+    void setWealth(Wealth wealth) {
+        this.wealth = wealth;
+    }
+
+    public List<Abilities> getAbilities() {
+        return abilities;
+    }
+
+    public void setAbilities(List<Abilities> abilities) {
+        this.abilities = abilities;
     }
 }

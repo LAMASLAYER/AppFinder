@@ -27,7 +27,6 @@ public class Characters {
     private String weightUnit;
     private Timestamp creationDate;
 
-
     public int getCharId() {
         return charId;
     }

@@ -34,5 +34,8 @@ public class AbilitiesServiceImpl implements AbilitiesService {
     @Override
     public Abilities getAbilityByName(String name) { return abilitiesRepository.findByName(name); }
 
+    @Override
+    public List<Abilities> getAbilitiesByIdIn(Integer[] ids) { return abilitiesRepository.findByAbilityIdIn(ids); }
+
 
 }

@@ -1,0 +1,1 @@
+#This package is meant to be for tables comparators. Example modifiers for abilities, wealth, age, etc.

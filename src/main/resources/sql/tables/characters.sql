@@ -25,7 +25,7 @@ WARNING: RACE INSERT SHOULD BE DONE BEFORE. SEE RACES.SQL
 
 INSERT INTO characters
 VALUES (
-           2,
+           1,
            1,
            1,
            34,

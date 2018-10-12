@@ -51,4 +51,10 @@ public class AbilitiesController {
         LOGGER.info("Retrieving Ability with the name: " + name);
         return abilitiesService.getAbilityByName(name);
     }
+
+    @GetMapping(path = "/charAbilities/{ids}")
+    public List<Abilities> getByIdIn(@PathVariable("ids") Integer[] ids) {
+        LOGGER.info("Retrieving Gears with ids of the list " + ids) ;
+        return abilitiesService.getAbilitiesByIdIn(ids);
+    }
 }
