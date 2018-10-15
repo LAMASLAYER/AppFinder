@@ -1,6 +1,5 @@
 package com.appfinder.data.chars;
 
-import java.util.Arrays;
 import java.util.List;
 
 import com.appfinder.components.abilities.Abilities;
