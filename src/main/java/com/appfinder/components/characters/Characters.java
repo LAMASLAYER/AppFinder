@@ -15,6 +15,7 @@ public class Characters {
     private int charId;
     private int raceId;
     private int playerId;
+    private int campaignId;
     private int age;
     private char gender;
     private String name;
@@ -137,5 +138,13 @@ public class Characters {
 
     public void setCreationDate(Timestamp creationDate) {
         this.creationDate = creationDate;
+    }
+
+    public int getCampaignId() {
+        return campaignId;
+    }
+
+    public void setCampaignId(int campaignId) {
+        this.campaignId = campaignId;
     }
 }

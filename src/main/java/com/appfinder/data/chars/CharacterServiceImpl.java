@@ -44,6 +44,7 @@ public class CharacterServiceImpl implements CharacterService {
 
         Characters character = restTemplate.getForObject(uri + "/characters/charId/" + charId, Characters.class);
         newChar.setCharId(character.getCharId());
+        newChar.setCampaignId(character.getCampaignId());
         newChar.setAge(character.getAge());
         newChar.setGender(character.getGender());
         newChar.setAlignment(character.getAlignment());
@@ -189,6 +190,7 @@ public class CharacterServiceImpl implements CharacterService {
             modifier = restTemplate.getForObject(uri + "/modifierTable/modifierTableId/" + charAbility.getAbilityValue(), Integer.class);
             abilities.get(o).setModifier(charAbility.getAbilityValue() + modifier);
         }
+
 
 
         newChar.setAbilities(abilities);

@@ -14,6 +14,7 @@ import com.appfinder.components.wealth.Wealth;
 public class Character {
 
     private int charId;
+    private int campaignId;
     private String race;
     private int age;
     private char gender;
@@ -192,5 +193,13 @@ public class Character {
 
     public void setAbilities(List<Abilities> abilities) {
         this.abilities = abilities;
+    }
+
+    public int getCampaignId() {
+        return campaignId;
+    }
+
+    public void setCampaignId(int campaignId) {
+        this.campaignId = campaignId;
     }
 }
