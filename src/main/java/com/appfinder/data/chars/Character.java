@@ -15,6 +15,7 @@ public class Character {
 
     private int charId;
     private int campaignId;
+    private int campaignCredentials;
     private String race;
     private int age;
     private char gender;
@@ -199,7 +200,15 @@ public class Character {
         return campaignId;
     }
 
-    public void setCampaignId(int campaignId) {
+    void setCampaignId(int campaignId) {
         this.campaignId = campaignId;
+    }
+
+    public int getCampaignCredentials() {
+        return campaignCredentials;
+    }
+
+    public void setCampaignCredentials(int campaignCredentials) {
+        this.campaignCredentials = campaignCredentials;
     }
 }

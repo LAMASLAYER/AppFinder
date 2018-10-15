@@ -46,7 +46,7 @@ public class CharactersController {
         charactersService.saveCharacter(character);
     }
 
-    @GetMapping(path = "/playerid/{playerId}")
+    @GetMapping(path = "/playerId/{playerId}")
     public List<Characters> getCharactersByPlayerId(@PathVariable int playerId) {
         LOGGER.info("Retrieving characters of player with the id: " + playerId);
         return charactersService.getCharactersByPlayerId(playerId);

@@ -16,6 +16,7 @@ public class Characters {
     private int raceId;
     private int playerId;
     private int campaignId;
+    private int campaignCredentials;
     private int age;
     private char gender;
     private String name;
@@ -146,5 +147,13 @@ public class Characters {
 
     public void setCampaignId(int campaignId) {
         this.campaignId = campaignId;
+    }
+
+    public int getCampaignCredentials() {
+        return campaignCredentials;
+    }
+
+    public void setCampaignCredentials(int campaignCredentials) {
+        this.campaignCredentials = campaignCredentials;
     }
 }
