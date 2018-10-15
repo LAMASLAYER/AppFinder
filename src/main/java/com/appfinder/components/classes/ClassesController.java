@@ -40,8 +40,8 @@ public class ClassesController {
     }
 
     @PostMapping(path = "/post")
-    public void saveClass(@RequestBody Classes _class) {
-            classesService.saveClass(_class);
+    public void saveClass(@RequestBody Classes cClass) {
+            classesService.saveClass(cClass);
     }
 
     @GetMapping(path = "/name/{name}")

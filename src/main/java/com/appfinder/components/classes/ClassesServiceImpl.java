@@ -22,8 +22,8 @@ public class ClassesServiceImpl implements ClassesService {
     }
 
     @Override
-    public void saveClass(Classes _class) {
-        classesRepository.save(_class);
+    public void saveClass(Classes cClass) {
+        classesRepository.save(cClass);
     }
 
     @Override
