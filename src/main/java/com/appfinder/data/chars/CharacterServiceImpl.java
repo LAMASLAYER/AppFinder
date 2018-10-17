@@ -14,6 +14,7 @@ import com.appfinder.components.charwealth.CharWealth;
 import com.appfinder.components.classes.Classes;
 import com.appfinder.components.feats.Feats;
 import com.appfinder.components.gear.Gear;
+import com.appfinder.components.players.Players;
 import com.appfinder.components.races.Races;
 import com.appfinder.components.racestraits.RacesTraits;
 import com.appfinder.components.skills.Skills;
@@ -57,6 +58,9 @@ public class CharacterServiceImpl implements CharacterService {
         newChar.setWeight(character.getWeight());
         newChar.setWeightUnit(character.getWeightUnit());
         newChar.setName(character.getName());
+
+        Players player = restTemplate.getForObject(SERVER + "/players/playerId/" + character.getPlayerId(), Players.class);
+        newChar.setPlayerName(player.getName());
 
         Races charRace = restTemplate.getForObject(SERVER + "/races/raceId/" + character.getRaceId(), Races.class);
         newChar.setRace(charRace.getName());

@@ -35,7 +35,7 @@ public class PlayerController {
 
 
 
-    @GetMapping(path = "/playerid/{playerId}")
+    @GetMapping(path = "/playerId/{playerId}")
     public Players getUserById(@PathVariable int playerId) {
         LOGGER.info("Retrieving player with the id: " + playerId);
         return playersService.getPlayerById(playerId);
