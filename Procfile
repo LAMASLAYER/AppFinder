@@ -1,1 +1,1 @@
-web: java -war target/AppFinder-0.1.war
+web: java $JAVA_OPTS -war target/AppFinder-0.1.war  --server.port=$PORT $JAR_OPTS
