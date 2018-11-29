@@ -18,6 +18,8 @@ public class Abilities {
     private String description;
     private int value;
     private int modifier;
+    private int bonus;
+    private int penalty;
 
 
     public int getAbilityId() {
@@ -66,5 +68,21 @@ public class Abilities {
 
     public void setModifier(int modifier) {
         this.modifier = modifier;
+    }
+
+    public int getBonus() {
+        return bonus;
+    }
+
+    public void setBonus(int bonus) {
+        this.bonus = bonus;
+    }
+
+    public int getPenalty() {
+        return penalty;
+    }
+
+    public void setPenalty(int penalty) {
+        this.penalty = penalty;
     }
 }
