@@ -11,7 +11,7 @@ import javax.persistence.Id;
 public class ModifierTable {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int modifierTableId;
     private int matrixValue;
 

@@ -10,7 +10,7 @@ import javax.persistence.Id;
 public class Wealth {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int wealthId;
     private int goldAmnt;
     private int silverAmnt;

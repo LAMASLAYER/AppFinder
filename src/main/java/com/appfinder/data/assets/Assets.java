@@ -10,7 +10,7 @@ import javax.persistence.Id;
 public class Assets {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int assetId;
     private String url;
     private String category;

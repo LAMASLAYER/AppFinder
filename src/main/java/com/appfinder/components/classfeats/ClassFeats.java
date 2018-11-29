@@ -11,7 +11,7 @@ import javax.persistence.Id;
 public class ClassFeats {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int classFeatId;
     private int classId;
     private int featId;

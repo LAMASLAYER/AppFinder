@@ -11,7 +11,7 @@ import javax.persistence.Id;
 public class CharSpell {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int charSpellId;
     private int charId;
     private int spellId;

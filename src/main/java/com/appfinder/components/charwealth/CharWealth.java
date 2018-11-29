@@ -11,7 +11,7 @@ import javax.persistence.Id;
 public class CharWealth {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int charWealthId;
     private int charId;
     private int wealthId;

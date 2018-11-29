@@ -11,7 +11,7 @@ import java.sql.Timestamp;
 public class Characters {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int charId;
     private int raceId;
     private int playerId;

@@ -11,7 +11,7 @@ import javax.persistence.Id;
 public class Gear {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int gearId;
     private String name;
     private int typeId;

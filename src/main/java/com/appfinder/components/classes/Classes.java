@@ -11,7 +11,7 @@ import javax.persistence.Id;
 public class Classes {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int classId;
     private String name;
     private String alignment;

@@ -13,7 +13,7 @@ import java.sql.Timestamp;
 public class Players {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int playerId;
     private String name;
     private String password;

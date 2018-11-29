@@ -11,7 +11,7 @@ import javax.persistence.Id;
 public class CharSkills {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int charSkillId;
     private int charId;
     private int skillId;

@@ -11,7 +11,7 @@ import javax.persistence.Id;
 public class Campaigns {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int campaignId;
     private String name;
     private int gmId;

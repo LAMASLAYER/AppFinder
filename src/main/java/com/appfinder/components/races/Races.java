@@ -10,7 +10,7 @@ import javax.persistence.Id;
 public class Races {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int raceId;
     private String name;
     private String size;
