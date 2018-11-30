@@ -42,7 +42,11 @@ public class AbilitiesController {
 
     @PostMapping(path = "/post")
     public void saveAbility(@RequestBody Abilities ability) {
-        LOGGER.info("Saving Ability " + ability);
+        if(null != abilitiesService.getAbilityById(ability.getAbilityId())) {
+            LOGGER.info("Updating Ability " + ability);
+        } else {
+            LOGGER.info("Saving Ability " + ability);
+        }
         abilitiesService.saveAbility(ability);
     }
 
