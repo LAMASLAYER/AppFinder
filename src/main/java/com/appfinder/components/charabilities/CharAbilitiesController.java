@@ -41,7 +41,11 @@ public class CharAbilitiesController {
 
     @PostMapping(path = "/post")
     public void saveCharAbilities(@RequestBody CharAbilities charAbilities) {
-        LOGGER.info("Saving CharAbilities " + charAbilities);
+        if(null !=  charAbilitiesService.getByCharAbilityId(charAbilities.getCharAbilityId())) {
+            LOGGER.info("Updating CharAbilities " + charAbilities);
+        } else {
+            LOGGER.info("Saving CharAbilities " + charAbilities);
+        }
         charAbilitiesService.saveCharAbilities(charAbilities);
     }
 

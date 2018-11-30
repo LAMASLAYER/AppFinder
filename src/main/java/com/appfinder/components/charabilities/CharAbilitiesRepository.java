@@ -7,4 +7,5 @@ import java.util.List;
 public interface CharAbilitiesRepository extends JpaRepository<CharAbilities, Integer> {
     List<CharAbilities> findByCharId(int charId);
     CharAbilities findByAbilityId(int abilityId);
+    CharAbilities findByCharAbilityId(int charAbilityId);
 }

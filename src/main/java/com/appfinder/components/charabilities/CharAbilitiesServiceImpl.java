@@ -29,4 +29,7 @@ public class CharAbilitiesServiceImpl implements CharAbilitiesService {
     @Override
     public CharAbilities getByAbilityId(int abilityId) { return charAbilitiesRepository.findByAbilityId(abilityId); }
 
+    @Override
+    public CharAbilities getByCharAbilityId(int charAbilityId) { return charAbilitiesRepository.findByCharAbilityId(charAbilityId); }
+
 }

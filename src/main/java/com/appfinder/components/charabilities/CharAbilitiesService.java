@@ -7,4 +7,5 @@ public interface CharAbilitiesService {
     List<CharAbilities> getByCharId(Integer charId);
     void saveCharAbilities(CharAbilities charAbilities);
     CharAbilities getByAbilityId(int abilityId);
+    CharAbilities getByCharAbilityId(int charAbilityId);
 }
