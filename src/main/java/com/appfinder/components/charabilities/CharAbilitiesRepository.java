@@ -8,4 +8,5 @@ public interface CharAbilitiesRepository extends JpaRepository<CharAbilities, In
     List<CharAbilities> findByCharId(int charId);
     CharAbilities findByAbilityId(int abilityId);
     CharAbilities findByCharAbilityId(int charAbilityId);
+    CharAbilities findByCharIdAndAbilityId(int charId, int abilityId);
 }

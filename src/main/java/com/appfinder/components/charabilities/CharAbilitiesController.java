@@ -41,7 +41,7 @@ public class CharAbilitiesController {
 
     @PostMapping(path = "/post")
     public void saveCharAbilities(@RequestBody CharAbilities charAbilities) {
-        if(null !=  charAbilitiesService.getByCharAbilityId(charAbilities.getCharAbilityId())) {
+        if(null != charAbilitiesService.getByCharAbilityId(charAbilities.getCharAbilityId())) {
             LOGGER.info("Updating CharAbilities " + charAbilities);
         } else {
             LOGGER.info("Saving CharAbilities " + charAbilities);
@@ -53,6 +53,12 @@ public class CharAbilitiesController {
     public CharAbilities getByAbilityId(@PathVariable int abilityId) {
         LOGGER.info("Retrieving CharAbilities with the id: " + abilityId);
         return charAbilitiesService.getByAbilityId(abilityId);
+    }
+
+    @GetMapping(path = "charId/{charId}/abilityId/{abilityId}")
+    public CharAbilities getByCharIdAndAbilityId(@PathVariable int charId, @PathVariable int abilityId) {
+        LOGGER.info("Retrieving CharAbilities whit the charId " + charId + " and the ability " + abilityId);
+        return charAbilitiesService.getByCharIdAndAbilityId(charId, abilityId);
     }
 
 }

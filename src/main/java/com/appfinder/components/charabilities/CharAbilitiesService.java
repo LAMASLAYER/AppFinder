@@ -8,4 +8,5 @@ public interface CharAbilitiesService {
     void saveCharAbilities(CharAbilities charAbilities);
     CharAbilities getByAbilityId(int abilityId);
     CharAbilities getByCharAbilityId(int charAbilityId);
+    CharAbilities getByCharIdAndAbilityId(int charId, int abilityId);
 }
