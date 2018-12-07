@@ -75,13 +75,15 @@ public class AppFinder {
             matcher.setCaseSensitive(false);
             configurer.setPathMatcher(matcher);
         }
+    }
 
-        public class RepositoryConfiguration extends RepositoryRestConfigurerAdapter {
+    @Configuration
+    public class RepositoryConfiguration extends RepositoryRestConfigurerAdapter {
 
-            @Override
-            public void configureRepositoryRestConfiguration(RepositoryRestConfiguration config) {
-                config.exposeIdsFor(Character.class);
-            }
+        @Override
+        public void configureRepositoryRestConfiguration(RepositoryRestConfiguration config) {
+            config.exposeIdsFor(Character.class);
         }
     }
+
 }

@@ -11,8 +11,11 @@ import com.appfinder.components.skills.Skills;
 import com.appfinder.components.spells.Spells;
 import com.appfinder.components.wealth.Wealth;
 
+import javax.persistence.Id;
+
 public class Character {
 
+    @Id
     private int charId;
     private int campaignId;
     private int campaignCredentials;
