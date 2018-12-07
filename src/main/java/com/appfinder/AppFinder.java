@@ -1,5 +1,6 @@
 package com.appfinder;
 
+import com.appfinder.components.characters.Characters;
 import com.appfinder.data.chars.Character;
 import org.apache.log4j.Logger;
 
@@ -82,7 +83,7 @@ public class AppFinder {
 
         @Override
         public void configureRepositoryRestConfiguration(RepositoryRestConfiguration config) {
-            config.exposeIdsFor(Character.class);
+            config.exposeIdsFor(Character.class, Characters.class);
         }
     }
 
