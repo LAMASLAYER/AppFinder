@@ -1,5 +1,6 @@
 package com.appfinder;
 
+import com.appfinder.data.chars.Character;
 import org.apache.log4j.Logger;
 
 import org.springframework.boot.CommandLineRunner;
@@ -11,6 +12,8 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;
+import org.springframework.data.rest.core.config.RepositoryRestConfiguration;
+import org.springframework.data.rest.webmvc.config.RepositoryRestConfigurerAdapter;
 import org.springframework.util.AntPathMatcher;
 import org.springframework.web.servlet.config.annotation.CorsRegistry;
 import org.springframework.web.servlet.config.annotation.PathMatchConfigurer;
@@ -71,6 +74,15 @@ public class AppFinder {
             AntPathMatcher matcher = new AntPathMatcher();
             matcher.setCaseSensitive(false);
             configurer.setPathMatcher(matcher);
+        }
+    }
+
+    @Configuration
+    public class RepositoryConfiguration extends RepositoryRestConfigurerAdapter {
+
+        @Override
+        public void configureRepositoryRestConfiguration(RepositoryRestConfiguration config) {
+            config.exposeIdsFor(Character.class);
         }
     }
 
