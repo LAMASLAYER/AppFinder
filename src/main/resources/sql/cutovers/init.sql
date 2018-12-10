@@ -463,6 +463,33 @@ VALUES (5, 'CRAFT', 'INT', 'You are skilled in the creation of a specific group 
 VALUES (6, 'DIPLOMACY', 'CHA', 'You can use this skill to persuade others to agree with your arguments, to resolve differences, and to gather valuable information or rumors from people.');
 VALUES (7, 'DISABLE DEVICE', 'DEX', 'You are skilled at disarming traps and opening locks. In addition, this skill lets you sabotage simple mechanical devices, such as catapults, wagon wheels, and doors.');
 VALUES (8, 'DISGUISE', 'CHA', 'You are skilled at changing your appearance.');
+VALUES (9, 'ESCAPE ARTIST', 'DEX', 'Your training allows you to slip bonds and escape from grapples.');
+VALUES (10, 'FLY', 'DEX', 'You are skilled as flying.');
+VALUES (11, 'HANDLE ANIMAL', 'CHA', 'You are trained at working with animals, and can teach them tricks, get them to follow your simple commands, or even domesticate them.');
+VALUES (12, 'HEAL', 'WIS', 'You are skilled at tending to the ailments of others.');
+VALUES (13, 'INTIMIDATE ', 'CHA', 'You can use this skill to frighten your opponents or to get them to act in a way that benefits you. This skill includes verbal threats and displays of prowess.');
+VALUES (14, 'KNOWLEDGE(ARCANA)', 'INT', 'ancient mysteries, magic traditions, arcane symbols, constructs, dragons, magical beasts); Although robots are constructs, Knowledge (arcana) cannot be used to identify robots or their abilities and weaknesses.');
+VALUES (15, 'KNOWLEDGE(DUNGEONEERING)', 'INT', 'aberrations, caverns, oozes, spelunking.');
+VALUES (16, 'KNOWLEDGE(ENGINEERING)', 'INT', 'buildings, aqueducts, bridges, fortifications; This is the most important skill with regard to technological subjects.');
+VALUES (17, 'KNOWLEDGE(HISTORY)', 'INT', 'wars, colonies, migrations, founding of cities');
+VALUES (18, 'KNOWLEDGE(LOCAL)', 'INT', 'egends, personalities, inhabitants, laws, customs, traditions, humanoids');
+VALUES (19, 'KNOWLEDGE(NATURE)', 'INT', 'animals, fey, monstrous humanoids, plants, seasons and cycles, weather, vermin');
+VALUES (20, 'KNOWLEDGE(NOBILITY)', 'INT', 'lineages, heraldry, personalities, royalty');
+VALUES (21, 'KNOWLEDGE(PLANES)', 'INT', 'the Inner Planes, the Outer Planes, the Astral Plane, the Ethereal Plane, outsiders, planar magic');
+VALUES (22, 'KNOWLEDGE(RELIGION)', 'INT', 'gods and goddesses, mythic history, ecclesiastic tradition, holy symbols, undead');
+VALUES (23, 'KNOWLEDGE(GEOGRAPHY)', 'INT', 'Used for astronomy.');
+VALUES (24, 'LINGUISTICS', 'INT', 'You are skilled at working with language, in both its spoken and written forms. ');
+VALUES (25, 'PERCEPTION', 'WIS', 'Your senses allow you to notice fine details and alert you to danger. Perception covers all five senses, including sight, hearing, touch, taste, and smell.');
+VALUES (26, 'PERFORM', 'CHA', 'You are skilled at one form of entertainment, from singing to acting to playing an instrument.');
+VALUES (27, 'PROFESSION', 'WIS', 'You are skilled at a specific job.');
+VALUES (28, 'RIDE', 'DEX', 'You are skilled at riding mounts, usually a horse, but possibly something more exotic, like a griffon or pegasus.');
+VALUES (29, 'SENSE MOTIVE', 'WIS', 'You are skilled at detecting falsehoods and true intentions.');
+VALUES (30, 'SLEIGHT OF HAND', 'DEX', 'Your training allows you to pick pockets, draw hidden weapons, and take a variety of actions without being noticed.');
+VALUES (31, 'SPELLCRAFT', 'INT', 'You are skilled at the art of casting spells, identifying magic items, crafting magic items, and identifying spells as they are being cast.');
+VALUES (32, 'STEALTH', 'DEX', 'You are skilled at avoiding detection, allowing you to slip past foes or strike from an unseen position. This skill covers hiding and moving silently.');
+VALUES (33, 'SURVIVAL', 'WIS', 'You are skilled at surviving in the wild and at navigating in the wilderness. You also excel at following trails and tracks left by others.');
+VALUES (34, 'SWIM', 'STR', 'You know how to swim and can do so even in stormy water.');
+VALUES (35, 'USE MAGIC DEVICE', 'CHA', 'You are skilled at activating magic items, even if you are not otherwise trained in their use.');
 
 
 DROP TABLE IF EXISTS SPELLS;
