@@ -141,6 +141,7 @@ CREATE TABLE CHAR_SKILLS
   CHAR_SKILL_ID SERIAL,
   CHAR_ID INT NOT NULL,
   SKILL_ID INT NOT NULL,
+  RANK INT NOT NULL,
   PRIMARY KEY (CHAR_SKILL_ID)
 );
 
@@ -149,7 +150,7 @@ INSERT THIS FOR A TEST CHAR_SKILL
 */
 
 INSERT INTO CHAR_SKILLS
-VALUES (1, 1, 1);
+VALUES (1, 1, 1, 0);
 /*MASSIVE DEATH*/
 DROP TABLE IF EXISTS CHAR_SPELL;
 CREATE TABLE CHAR_SPELL
@@ -450,11 +451,20 @@ CREATE TABLE SKILLS
 );
 
 /*
-INSERT THIS FOR A TEST SKILL
+INSERT SKILLS
 */
 
 INSERT INTO SKILLS
 VALUES (1, 'CLIMB', 'STR', 'Ability to climb walls/cliffs/other');
+VALUES (2, 'ACROBATICS', 'DEX', 'You can keep your balance while traversing narrow or treacherous surfaces. You can also dive, flip, jump, and roll, avoiding attacks and confusing your opponents.');
+VALUES (3, 'APPRAISE', 'INT', 'You can evaluate the monetary value of an object.');
+VALUES (4, 'BLUFF', 'CHA', 'You know how to tell a lie.');
+VALUES (5, 'CRAFT', 'INT', 'You are skilled in the creation of a specific group of items.');
+VALUES (6, 'DIPLOMACY', 'CHA', 'You can use this skill to persuade others to agree with your arguments, to resolve differences, and to gather valuable information or rumors from people.');
+VALUES (7, 'DISABLE DEVICE', 'DEX', 'You are skilled at disarming traps and opening locks. In addition, this skill lets you sabotage simple mechanical devices, such as catapults, wagon wheels, and doors.');
+VALUES (8, 'DISGUISE', 'CHA', 'You are skilled at changing your appearance.');
+
+
 DROP TABLE IF EXISTS SPELLS;
 CREATE TABLE SPELLS
 (

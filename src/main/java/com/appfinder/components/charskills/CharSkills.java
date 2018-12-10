@@ -15,6 +15,7 @@ public class CharSkills {
     private int charSkillId;
     private int charId;
     private int skillId;
+    private int rank;
 
     public int getCharSkillId() {
         return charSkillId;
@@ -38,5 +39,13 @@ public class CharSkills {
 
     public void setSkillId(int skillId) {
         this.skillId = skillId;
+    }
+
+    public int getRank() {
+        return rank;
+    }
+
+    public void setRank(int rank) {
+        this.rank = rank;
     }
 }
