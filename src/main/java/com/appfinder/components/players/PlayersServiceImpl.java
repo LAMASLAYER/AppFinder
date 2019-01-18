@@ -12,8 +12,8 @@ public class PlayersServiceImpl implements PlayersService {
     private final PlayerRepository playerRepository;
 
     @Autowired
-    public PlayersServiceImpl(PlayerRepository userRepository) {
-        this.playerRepository = userRepository;
+    public PlayersServiceImpl(PlayerRepository playerRepository) {
+        this.playerRepository = playerRepository;
     }
 
     @Override
@@ -30,5 +30,8 @@ public class PlayersServiceImpl implements PlayersService {
     public List<Players> getAllPlayers() {
         return playerRepository.findAll();
     }
+
+    @Override
+    public Players getPlayerByName(String name) { return playerRepository.getPlayersByName(name); }
 
 }

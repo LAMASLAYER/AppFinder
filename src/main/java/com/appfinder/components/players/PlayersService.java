@@ -6,4 +6,5 @@ public interface PlayersService {
     Players getPlayerById(Integer playerId);
     void savePlayer(Players playersDto);
     List<Players> getAllPlayers();
+    Players getPlayerByName(String name);
 }

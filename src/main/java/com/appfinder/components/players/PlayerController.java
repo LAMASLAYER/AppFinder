@@ -46,5 +46,4 @@ public class PlayerController {
         LOGGER.info("Saving Player " + player);
         playersService.savePlayer(player);
     }
-
 }
