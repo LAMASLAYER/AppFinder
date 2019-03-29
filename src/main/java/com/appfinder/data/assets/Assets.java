@@ -14,6 +14,8 @@ public class Assets {
     private int assetId;
     private String url;
     private String category;
+    private int width;
+    private int height;
 
 
     public int getAssetId() {
@@ -38,5 +40,21 @@ public class Assets {
 
     public void setCategory(String category) {
         this.category = category;
+    }
+
+    public int getWidth() {
+        return width;
+    }
+
+    public void setWidth(int width) {
+        this.width = width;
+    }
+
+    public int getHeight() {
+        return height;
+    }
+
+    public void setHeight(int height) {
+        this.height = height;
     }
 }
