@@ -50,4 +50,10 @@ public class AssetsController {
         LOGGER.info("Retrieving assets with the category:" + category);
         return assetsService.getByCategory(category);
     }
+
+    @GetMapping(path = "/category/{category}/album/{album}")
+    public List<Assets>  getByCategoryAndAlbum(@PathVariable String category, @PathVariable String album) {
+        LOGGER.info("Retrieving assets with the category:" + category + " and the album" + album);
+        return assetsService.getByCategoryAndAlbum(category, album);
+    }
 }

@@ -7,4 +7,5 @@ public interface AssetsService {
     void saveAssets(Assets assets);
     List<Assets> getAllAssets();
     List<Assets> getByCategory(String category);
+    List<Assets> getByCategoryAndAlbum(String category, String album);
 }

@@ -15,6 +15,7 @@ public class Assets {
     private String url;
     private String category;
     private String orientation;
+    private String album;
 
 
     public int getAssetId() {
@@ -47,5 +48,13 @@ public class Assets {
 
     public void setOrientation(String orientation) {
         this.orientation = orientation;
+    }
+
+    public String getAlbum() {
+        return album;
+    }
+
+    public void setAlbum(String album) {
+        this.album = album;
     }
 }
