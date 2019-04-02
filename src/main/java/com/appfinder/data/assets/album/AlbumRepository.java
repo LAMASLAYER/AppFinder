@@ -7,4 +7,5 @@ import java.util.List;
 
 public interface AlbumRepository extends JpaRepository<Album, Integer> {
     List<Album> findByAlbum(String album);
+    List<Album> getByCategory(String Category);
 }

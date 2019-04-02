@@ -27,4 +27,6 @@ public class AlbumServiceImpl implements AlbumService {
     @Override
     public void saveAlbum(Album album) { albumRepository.save(album); }
 
+    @Override
+    public List<Album> getByCategory(String category) { return albumRepository.getByCategory(category); }
 }

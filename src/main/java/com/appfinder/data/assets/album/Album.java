@@ -13,6 +13,7 @@ public class Album {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int albumId;
     private String album;
+    private String category;
 
 
     public int getAlbumIdId() {
@@ -29,5 +30,13 @@ public class Album {
 
     public void setAlbum(String album) {
         this.album = album;
+    }
+
+    public String getCategory() {
+        return category;
+    }
+
+    public void setCategory(String category) {
+        this.category = category;
     }
 }

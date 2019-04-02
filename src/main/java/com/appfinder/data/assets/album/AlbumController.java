@@ -45,8 +45,14 @@ public class AlbumController {
     }
 
     @GetMapping(path = "album/{album}")
-    public List<Album>  getByAlbum(@PathVariable String album) {
+    public List<Album> getByAlbum(@PathVariable String album) {
         LOGGER.info("Retrieving album:" + album);
         return albumService.getByAlbum(album);
+    }
+
+    @GetMapping(path = "category/{category}")
+    public List<Album> getByCategory(@PathVariable String category) {
+        LOGGER.info("Retrieving albums with the category:" + category);
+        return albumService.getByCategory(category);
     }
 }

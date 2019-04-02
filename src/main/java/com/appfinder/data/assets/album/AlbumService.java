@@ -6,4 +6,5 @@ public interface AlbumService {
     Album getAlbumById(Integer assetsId);
     List<Album> getByAlbum(String album);
     void saveAlbum(Album album);
+    List<Album> getByCategory(String category);
 }
