@@ -32,6 +32,12 @@ public class AlbumController {
         return albumRepository.findAll();
     }
 
+    @PostMapping(path = "/post")
+    public void saveAssets(@RequestBody Album album) {
+        LOGGER.info("Saving album " + album);
+        albumService.saveAlbum(album);
+    }
+
     @GetMapping(path = "/albumId/{albumId}")
     public Album getAlbumById(@PathVariable int albumId) {
         LOGGER.info("Retrieving album with the id: " + albumId);
