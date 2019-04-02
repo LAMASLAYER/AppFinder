@@ -15,11 +15,11 @@ public class Album {
     private String album;
 
 
-    public int getAssetId() {
+    public int getAlbumIdId() {
         return albumId;
     }
 
-    public void setAssetId(int assetId) {
+    public void setAlbumIdId(int assetId) {
         this.albumId = assetId;
     }
 
