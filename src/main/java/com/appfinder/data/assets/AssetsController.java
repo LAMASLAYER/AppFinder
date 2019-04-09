@@ -56,4 +56,10 @@ public class AssetsController {
         LOGGER.info("Retrieving assets with the category:" + category + " and the album" + album);
         return assetsService.getByCategoryAndAlbum(category, album);
     }
+
+    @GetMapping(path = "/category/{category}/orientation/{orientation}")
+    public List<Assets>  getByCategoryAndOrientation(@PathVariable String category, @PathVariable String orientation) {
+        LOGGER.info("Retrieving assets with the category:" + category + " and the orientation" + orientation);
+        return assetsService.getByCategoryAndOrientation(category, orientation);
+    }
 }

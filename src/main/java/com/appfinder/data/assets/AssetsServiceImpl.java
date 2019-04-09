@@ -37,4 +37,7 @@ public class AssetsServiceImpl implements AssetsService {
     @Override
     public List<Assets> getByCategoryAndAlbum(String category, String album) { return assetsRepository.findByCategoryAndAlbum(category, album); }
 
+    @Override
+    public List<Assets> getByCategoryAndOrientation(String category, String orientation) { return assetsRepository.findByCategoryAndOrientation(category, orientation); }
+
 }

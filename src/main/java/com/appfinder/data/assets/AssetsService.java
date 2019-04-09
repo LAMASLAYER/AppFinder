@@ -8,4 +8,5 @@ public interface AssetsService {
     List<Assets> getAllAssets();
     List<Assets> getByCategory(String category);
     List<Assets> getByCategoryAndAlbum(String category, String album);
+    List<Assets> getByCategoryAndOrientation(String category, String orientation);
 }

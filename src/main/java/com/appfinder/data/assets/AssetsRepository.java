@@ -6,4 +6,5 @@ import java.util.List;
 public interface AssetsRepository extends JpaRepository<Assets, Integer> {
     List<Assets> findByCategory(String category);
     List<Assets> findByCategoryAndAlbum(String category, String album);
+    List<Assets> findByCategoryAndOrientation(String category, String orientation);
 }
